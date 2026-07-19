@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEDIA - Arnav Sinha</title>
+<meta name="description" content="Media - robots, events, and projects by Arnav Sinha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* album link cards */
+  .albums { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; border: 1px solid var(--line-2); }
+  .albums > * { border-right: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2); }
+  .albums > *:nth-child(2n){ border-right: 0; }
+  @media (max-width: 820px){ .albums { grid-template-columns: 1fr; } .albums > *{ border-right: 0; } }
+  .album {
+    display: flex; flex-direction: column; justify-content: space-between; gap: 26px;
+    min-height: 320px; padding: 30px; position: relative; overflow: hidden;
+    transition: background 0.18s ease;
+  }
+  .album:hover { background: var(--panel); }
+  /* embedded cover photo */
+  .album .cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: grayscale(0.1) contrast(1.03); transition: transform 0.5s ease; }
+  .album:hover .cover { transform: scale(1.04); }
+  .album .shade { position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(20,24,26,0.35) 0%, rgba(20,24,26,0.75) 70%, rgba(20,24,26,0.92) 100%); }
+  .album.soon::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 28px 28px; opacity: 0.4;
+  }
+  .album.live { border-left: 3px solid var(--acid); }
+  .album .top { display: flex; align-items: flex-start; justify-content: space-between; position: relative; z-index: 1; }
+  .album .top .arrow { font-family: var(--mono); color: var(--acid); font-size: 1rem; }
+  .album .body { position: relative; z-index: 1; }
+  .album h3 { font-size: 2rem; line-height: 0.98; margin-bottom: 10px; }
+  .album .sub { font-family: var(--mono); font-size: 0.74rem; color: var(--ink); text-transform: uppercase; letter-spacing: 0.06em; }
+  .album .foot { position: relative; z-index: 1; display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+  .album .foot .dot { width: 7px; height: 7px; background: var(--acid); display: inline-block; }
+  .album.soon { color: var(--muted-2); }
+  .album.soon h3 { color: var(--muted-2); }
+  .album.soon .sub { color: var(--muted-2); }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="sq"></span>ARNAV SINHA</a>
+    <button class="nav-toggle" aria-label="Menu">[ MENU ]</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="awards.html">Awards</a>
+      <a href="research.html">Research Papers</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="work.html">Work</a>
+      <a href="blog.html">Blog</a>
+      <a href="gallery.html" class="active">Media</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="tag reveal in">Archive</span>
+    <h1 class="reveal in">Media</h1>
+    <p class="reveal in">Photo albums from robots, competitions, and events. Tap an album to open the full set.</p>
+  </div>
+</section>
+
+<section style="border-bottom:none;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><span class="tag">Albums</span><h2 class="section-title" style="margin-top:12px;">Photo sets</h2></div>
+      <span class="idx">[ 01 / ARCHIVE ]</span>
+    </div>
+
+    <div class="albums reveal">
+
+      <a class="album live" href="https://photos.google.com/share/AF1QipPbEDyRtVcw_AYycWwaeIPhPuG4ngZaJWp819e6k9yLrKLL6SV5Jb8DxSKDUi7M9g?key=OEI5d2JSaEpIdk02bFNkblo1R1lIUngtQUdNY29B" target="_blank" rel="noopener">
+        <img class="cover" src="https://lh3.googleusercontent.com/pw/AP1GczMEJEDxTeKxoTzQxFulqcn4q4RobeMtRpfV0XB_nTf-dCXHdj_sp7sGsx5KnGC_DaYQY6TaWTQeVrKYL09gHKYu1zaUfJ-Hqi1ahkd9eiGMduUo0vw=w1600" alt="Bell Brawls VII combat robotics tournament" referrerpolicy="no-referrer" loading="lazy">
+        <div class="shade"></div>
+        <div class="top">
+          <span class="sub">// COMBAT ROBOTICS</span>
+          <span class="arrow">↗ OPEN</span>
+        </div>
+        <div class="body">
+          <h3>Bell Brawls VII</h3>
+          <div class="sub">May 16 – 19 · Tournament</div>
+        </div>
+        <div class="foot"><span class="dot"></span> GOOGLE PHOTOS · ~35 IMAGES</div>
+      </a>
+
+      <div class="album soon">
+        <div class="top">
+          <span class="sub">// NEXT</span>
+          <span class="arrow" style="color:var(--muted-2);">+ ADD</span>
+        </div>
+        <div class="body">
+          <h3>More coming</h3>
+          <div class="sub">Maker Faire · Cracked Labs · builds</div>
+        </div>
+        <div class="foot">SEND ME A LINK OR PHOTOS</div>
+      </div>
+
+    </div>
+
+    <div class="mods reveal" style="margin-top:40px;"><div class="mod" style="text-align:center;">
+      <span class="no" style="display:block; margin-bottom:10px;">[ ADD ANOTHER ALBUM ]</span>
+      <p style="max-width:640px; margin:0 auto;">Send me another Google Photos link (or the actual image files) and I will add it here as a new album card. If you would rather show a full grid of photos on the page instead of the cover, upload the files and I will build one.</p>
+    </div></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>© 2026 ARNAV SINHA - SAN JOSE / CA</div>
+    <div><a href="mailto:Arnav.S.Sinha@gmail.com">ARNAV.S.SINHA@GMAIL.COM</a></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARNAV SINHA - Home</title>
+<meta name="description" content="Arnav Sinha - award-winning and published student engineer. Robotics, materials science, autonomy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* ---- Impact growth graph ---- */
+  .impact-wrap { border: 1px solid var(--line-2); background: var(--panel); padding: 30px 26px 24px; }
+  .impact-svg { width: 100%; height: auto; display: block; }
+  .impact-svg .grid-line { stroke: var(--line-2); stroke-width: 1; }
+  .impact-svg .axis { stroke: var(--line-2); stroke-width: 1.5; }
+  .impact-svg .ylab, .impact-svg .xlab { fill: var(--muted-2); font-family: 'Space Mono', monospace; font-size: 12px; }
+  .impact-svg .area { fill: var(--acid); opacity: 0.06; }
+  .impact-svg .measured { fill: none; stroke: var(--acid); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+  .impact-svg .projected { fill: none; stroke: var(--acid); stroke-width: 3; stroke-dasharray: 4 7; stroke-linecap: round; opacity: 0.85; }
+  .impact-svg .dot { fill: var(--panel); stroke: var(--acid); stroke-width: 3; }
+  .impact-svg .pval { fill: var(--ink); font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 17px; }
+  .impact-svg .pdesc { fill: var(--muted); font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .impact-svg .billions { fill: var(--ink); font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 46px; letter-spacing: -0.02em; }
+  .impact-svg .bdrivers { fill: var(--acid); font-family: 'Space Mono', monospace; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.08em; }
+  /* draw-on animation when section enters view */
+  .impact-svg .measured, .impact-svg .projected { stroke-dashoffset: 1600; transition: stroke-dashoffset 2s ease; }
+  .impact-svg .measured { stroke-dasharray: 1600; }
+  .reveal.in .impact-svg .measured { stroke-dashoffset: 0; }
+  .reveal.in .impact-svg .projected { stroke-dashoffset: 0; transition: stroke-dashoffset 2.4s ease 0.5s; }
+  .impact-legend { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 26px; margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line-2); }
+  @media (max-width: 700px){ .impact-legend { grid-template-columns: 1fr 1fr; } }
+  .impact-legend .li { font-family: 'Space Mono', monospace; font-size: 0.74rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
+  .impact-legend .li b { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand"><span class="sq"></span>ARNAV SINHA</a>
+    <button class="nav-toggle" aria-label="Menu">[ MENU ]</button>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="awards.html">Awards</a>
+      <a href="research.html">Research Papers</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="work.html">Work</a>
+      <a href="blog.html">Blog</a>
+      <a href="gallery.html">Media</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- IMPACT GRAPH -->
+<section style="border-bottom:none; padding-top:60px;">
+  <div class="wrap">
+    <div class="datastrip reveal in">
+      <span>02145</span><span>REV-07.2026</span><span>SAN JOSE / CA</span><span>BCP · CLASS 2027</span><span>STATUS: ACTIVE</span>
+    </div>
+    <div class="section-head reveal in">
+      <div>
+        <span class="tag">Impact</span>
+        <h2 class="section-title" style="margin-top:12px;">Lives touched - and where it is going</h2>
+        <p class="section-lead">Every project so far has reached more people than the last. The trajectory points somewhere much bigger.</p>
+      </div>
+      <span class="idx">[ 00 / TRAJECTORY ]</span>
+    </div>
+
+    <div class="impact-wrap reveal">
+      <svg class="impact-svg" viewBox="0 0 960 480" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Growth of lives touched, rising from 40 to a projected billions">
+        <!-- horizontal gridlines (log decades) -->
+        <g>
+          <line class="grid-line" x1="90" y1="369.0" x2="910" y2="369.0"/>
+          <line class="grid-line" x1="90" y1="328.1" x2="910" y2="328.1"/>
+          <line class="grid-line" x1="90" y1="287.1" x2="910" y2="287.1"/>
+          <line class="grid-line" x1="90" y1="246.1" x2="910" y2="246.1"/>
+          <line class="grid-line" x1="90" y1="205.2" x2="910" y2="205.2"/>
+          <line class="grid-line" x1="90" y1="164.2" x2="910" y2="164.2"/>
+          <line class="grid-line" x1="90" y1="123.3" x2="910" y2="123.3"/>
+          <line class="grid-line" x1="90" y1="82.3"  x2="910" y2="82.3"/>
+        </g>
+        <!-- y labels -->
+        <g>
+          <text class="ylab" x="82" y="373" text-anchor="end">100</text>
+          <text class="ylab" x="82" y="332" text-anchor="end">1K</text>
+          <text class="ylab" x="82" y="291" text-anchor="end">10K</text>
+          <text class="ylab" x="82" y="250" text-anchor="end">100K</text>
+          <text class="ylab" x="82" y="209" text-anchor="end">1M</text>
+          <text class="ylab" x="82" y="168" text-anchor="end">10M</text>
+          <text class="ylab" x="82" y="127" text-anchor="end">100M</text>
+          <text class="ylab" x="82" y="86"  text-anchor="end">1B+</text>
+        </g>
+        <!-- axes -->
+        <line class="axis" x1="90" y1="70" x2="90" y2="410"/>
+        <line class="axis" x1="90" y1="410" x2="910" y2="410"/>
+        <!-- x labels -->
+        <text class="xlab" x="385" y="432" text-anchor="middle">- ACHIEVED -</text>
+        <text class="xlab" x="770" y="432" text-anchor="middle">- PROJECTED -</text>
+
+        <!-- area under full curve -->
+        <path class="area" d="M90,410 L140,385.3 L270,369.0 L400,360.7 L520,344.4 L680,185.6 L860,82.3 L860,410 Z"/>
+
+        <!-- measured line (40 -> 400 -> 3M, all achieved) -->
+        <path class="measured" d="M140,385.3 L270,369.0 L400,360.7 L520,344.4 L680,185.6"/>
+        <!-- projected line (3M -> 1B+) -->
+        <path class="projected" d="M680,185.6 L860,82.3"/>
+
+        <!-- measured dots + labels -->
+        <circle class="dot" cx="140" cy="385.3" r="6"/>
+        <text class="pval" x="140" y="373" text-anchor="middle">40</text>
+
+        <circle class="dot" cx="270" cy="369.0" r="6"/>
+        <text class="pval" x="270" y="357" text-anchor="middle">100+</text>
+
+        <circle class="dot" cx="400" cy="360.7" r="6"/>
+        <text class="pval" x="400" y="348" text-anchor="middle">160+</text>
+
+        <circle class="dot" cx="520" cy="344.4" r="6"/>
+        <text class="pval" x="520" y="332" text-anchor="middle">400+</text>
+
+        <!-- reach point -->
+        <circle class="dot" cx="680" cy="185.6" r="6"/>
+        <text class="pval" x="680" y="173" text-anchor="middle">3M+</text>
+        <text class="pdesc" x="680" y="203" text-anchor="middle">reached</text>
+
+        <!-- BILLIONS star + labels -->
+        <g transform="translate(860,82.3)">
+          <path d="M0,-16 L4.7,-4.9 L16,-4.9 L6.6,2.1 L10.3,13 L0,6.4 L-10.3,13 L-6.6,2.1 L-16,-4.9 L-4.7,-4.9 Z" fill="var(--acid)"/>
+        </g>
+        <text class="billions" x="852" y="72" text-anchor="end">BILLIONS</text>
+        <text class="bdrivers" x="852" y="98" text-anchor="end">SELF-HEALING CONCRETE · AUTONOMY · ROBOTICS</text>
+      </svg>
+
+      <div class="impact-legend">
+        <div class="li"><b>40</b> - Combat Robotics Club members led</div>
+        <div class="li"><b>100+</b> - Students trained yearly, Maker Lab</div>
+        <div class="li"><b>160+</b> - Users on the Code2Coder platform</div>
+        <div class="li"><b>400+</b> - Attendees at the Maker Faire</div>
+        <div class="li"><b>3M+</b> - Reached via NBC-featured events</div>
+        <div class="li"><b>Billions</b> - Projected via infrastructure &amp; autonomy</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HERO -->
+<section class="hero" style="border-bottom:none;">
+  <div class="wrap">
+    <h1 class="reveal in">BUILD<br><span class="thin">THE</span> FUTURE</h1>
+    <div class="hero-sub reveal in"><span class="bar"></span> STUDENT ENGINEER · ROBOTICS · MATERIALS · AUTONOMY</div>
+    <p class="lead reveal in">I am Arnav Sinha - an award-winning and published student engineer. I turn hard problems into things people can use: combat robots, self-healing concrete, autonomous-vehicle sensor fusion, and tech-for-good organizations that mentor hundreds.</p>
+    <div class="hero-actions reveal in">
+      <a href="resume.html" class="btn btn-primary">View resume →</a>
+      <a href="research.html" class="btn btn-ghost">Research papers</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="border-bottom:none;">
+  <div class="wrap">
+    <div class="slab reveal">
+      <h2>Let us build something</h2>
+      <p>Robotics · research · projects for good</p>
+      <a href="contact.html" class="btn">Get in touch →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>© 2026 ARNAV SINHA - SAN JOSE / CA</div>
+    <div><a href="mailto:Arnav.S.Sinha@gmail.com">ARNAV.S.SINHA@GMAIL.COM</a></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
